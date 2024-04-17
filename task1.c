@@ -2,8 +2,29 @@
 
 #include <stdio.h>
 
-int main(int argc, char const *argv[])
+int Input(int arr[], int n)
 {
-    
-    return 0;
+    int i;
+    for (i = 0; i < n; i++)
+        scanf("%d", &arr[i]);
+    return i;
+}
+
+void BubbleSort(int arr[], int n)
+{
+    int i = 0;
+    int j = 0;
+    int temp = 0;
+    for (i = 0; i < n; ++i)
+    {
+        for (j = i; j < n; ++j)
+        {
+            if (arr[i] > arr[j])
+            {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
 }
